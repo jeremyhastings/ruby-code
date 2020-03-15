@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+$: << File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
+require 'net/http'
+require 'irb'
+require 'your_ruby'
+ARGV.clear
+
+def reload!
+  load 'lib/your_ruby.rb'
+end
+
+Y = YourRuby
+
+def why(results_count = 5)
+  Y.duckduckwhy('whytheluckystiff', results_count)
+end
+
+def r(*args)
+  Y.smallest_rectangle_of_aspect(*args)
+end
+
+IRB.start
