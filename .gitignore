@@ -57,8 +57,4 @@ build-iPhoneSimulator/
 
 .DS_Store
 
-1. Header - Payroll/.idea/
-
-2. Right Triangle/.idea/
-
-3. Rock Paper Scissors/.idea/
+.idea
