@@ -17,3 +17,6 @@ puts x.to_f
 y = "10".to_f
 puts x.odd?
 puts x.even?
+
+x_sqrt = Integer.sqrt(-1)
+x_sqrt * x_sqrt == -1
