@@ -15,4 +15,3 @@ puts 100 > 99
 puts 100 >= 100
 puts 100 >= 99
 puts 100 >= 101
-puts 
