@@ -1,5 +1,7 @@
+require_relative 'crud'
 
 class Student
+  include Crud
   attr_accessor :first_name, :last_name, :email, :username, :password
   # attr_reader :username
 
@@ -34,7 +36,7 @@ class Student
 
 end
 
-jeremy = Student.new("Jeremy", "Hastings", "jeremy.hastings@mac.com", "jeremy.hastings", "password")
+jeremy = Student.new("Jeremy", "Hastings", "jeremy.hastings@mac.com", "jeremy.hastings", "password1")
 dave = Student.new("Dave", "Jones", "dave.jones@scc.edu", "dave.jones", "password2")
 # jeremy.first_name = "Jeremy"
 # jeremy.last_name = "Hastings"
@@ -45,10 +47,11 @@ dave = Student.new("Dave", "Jones", "dave.jones@scc.edu", "dave.jones", "passwor
 # puts jeremy.last_name
 # puts jeremy.email
 # puts jeremy.username
-puts jeremy
-puts dave
-dave.last_name = jeremy.last_name
-puts "Dave is altered"
-puts dave
+# puts jeremy
+# puts dave
+# dave.last_name = jeremy.last_name
+# puts "Dave is altered"
+# puts dave
 
-
+jeremy.password = jeremy.create_hash_digest(jeremy.password)
+p jeremy
