@@ -1,3 +1,4 @@
+
 class Student
   attr_accessor :first_name, :last_name, :email, :username, :password
   # attr_reader :username
